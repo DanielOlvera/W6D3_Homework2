@@ -56,10 +56,14 @@ public class FragmentOne extends Fragment {
         // Inflate the layout for this fragment
         Log.d(TAG, "onCreateView: ");
 
-        textView = (TextView) getView().findViewById(R.id.ffo_textVw);
-        textView.setText(page + " - "+title);
-
         return inflater.inflate(R.layout.fragment_fragment_one, container, false);
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        textView = (TextView) getView().findViewById(R.id.ffo_textVw);
+        textView.setText(page + " - "+title);
+    }
 }
