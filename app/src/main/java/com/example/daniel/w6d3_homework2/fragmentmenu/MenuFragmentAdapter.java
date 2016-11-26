@@ -13,7 +13,7 @@ public class MenuFragmentAdapter extends FragmentPagerAdapter{
 
     private static final String TAG = "MenuFragmentAdapterTAG_";
 
-    private static int NUM_ITEMS = 1;
+    private static int NUM_ITEMS = 2;
 
     public MenuFragmentAdapter(FragmentManager fm) {
         super(fm);
@@ -26,6 +26,8 @@ public class MenuFragmentAdapter extends FragmentPagerAdapter{
         switch (position){
             case 0:
                 return FragmentOne.newInstance(0, "One");
+            case 1:
+                return FragmentTwo.newInstance(1, "Two");
             default:
                 return null;
         }

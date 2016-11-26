@@ -31,6 +31,9 @@ public class MenuFragmentActivity extends AppCompatActivity {
             case R.id.fom_fragOne:
                 Toast.makeText(this, "Menu One", Toast.LENGTH_SHORT).show();
                 return true;
+            case R.id.ftm_fragTwo:
+                Toast.makeText(this, "Menu Two", Toast.LENGTH_SHORT).show();
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
