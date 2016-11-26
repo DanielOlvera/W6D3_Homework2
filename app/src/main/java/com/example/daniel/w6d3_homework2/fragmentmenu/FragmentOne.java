@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -65,5 +67,13 @@ public class FragmentOne extends Fragment {
 
         textView = (TextView) getView().findViewById(R.id.ffo_textVw);
         textView.setText(page + " - "+title);
+
+        setHasOptionsMenu(true);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.fragmentone_menu, menu);
+        //super.onCreateOptionsMenu(menu, inflater);
     }
 }
